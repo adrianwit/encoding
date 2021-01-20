@@ -10,9 +10,9 @@ import (
 	"log"
 	"testing"
 
-	"github.com/dataence/encoding/benchtools"
-	"github.com/dataence/encoding/cursor"
-	"github.com/dataence/encoding/generators"
+	"github.com/adrianwit/encoding/benchtools"
+	"github.com/adrianwit/encoding/cursor"
+	"github.com/adrianwit/encoding/generators"
 )
 
 var (

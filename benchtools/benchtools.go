@@ -11,15 +11,15 @@ import (
 	"compress/gzip"
 	"compress/lzw"
 	"fmt"
+	"github.com/golang/snappy"
 	"io"
 	"log"
 	"os"
 	"runtime/pprof"
 	"time"
 
-	"code.google.com/p/snappy-go/snappy"
-	"github.com/dataence/encoding"
-	"github.com/dataence/encoding/cursor"
+	"github.com/adrianwit/encoding"
+	"github.com/adrianwit/encoding/cursor"
 )
 
 func TestCodec(codec encoding.Integer, in []int32, sizes []int) {
@@ -203,10 +203,8 @@ func RunTestSnappy(data []byte) {
 	log.Printf("encoding/RunTestSnappy: Testing comprssion Snappy\n")
 
 	now := time.Now()
-	e, err := snappy.Encode(nil, data)
-	if err != nil {
-		log.Fatalf("encoding/RunTestSnappy: encoding error: %v\n", err)
-	}
+	e := snappy.Encode(nil, data)
+
 	log.Printf("encoding/RunTestSnappy: Compressed from %d bytes to %d bytes in %d ns\n", len(data), len(e), time.Since(now).Nanoseconds())
 
 	d, err := snappy.Decode(nil, e)

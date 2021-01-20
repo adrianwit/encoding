@@ -9,8 +9,8 @@ package composition
 import (
 	"errors"
 
-	"github.com/dataence/encoding"
-	"github.com/dataence/encoding/cursor"
+	"github.com/adrianwit/encoding"
+	"github.com/adrianwit/encoding/cursor"
 )
 
 type Composition struct {

@@ -9,9 +9,9 @@ package variablebyte
 import (
 	"errors"
 
-	"github.com/dataence/bytebuffer"
-	"github.com/dataence/encoding"
-	"github.com/dataence/encoding/cursor"
+	"github.com/zentures/bytebuffer"
+	"github.com/adrianwit/encoding"
+	"github.com/adrianwit/encoding/cursor"
 )
 
 type VariableByte struct {

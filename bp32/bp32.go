@@ -19,9 +19,9 @@ package bp32
 import (
 	"errors"
 
-	"github.com/dataence/encoding"
-	"github.com/dataence/encoding/bitpacking"
-	"github.com/dataence/encoding/cursor"
+	"github.com/adrianwit/encoding"
+	"github.com/adrianwit/encoding/bitpacking"
+	"github.com/adrianwit/encoding/cursor"
 )
 
 const (
